@@ -5,7 +5,15 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    newArr = []
+
+    for i in arr:
+        result = 1
+        for x in arr:
+            result *= x
+        newArr.append(int(result / i))
+
+    return newArr
 
 
 if __name__ == '__main__':
