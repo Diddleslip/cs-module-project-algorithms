@@ -5,7 +5,18 @@ Returns: a List of integers
 def sliding_window_max(nums, k):
     # Your code here
 
-    pass
+    newArr = []
+    start = 0
+
+    for i in nums[k - 1:]:
+        newArr.append(max(nums[start:k]))
+        start += 1
+        k += 1
+    # print(newArr)
+    # print(max(nums[:k])) ## This give us the max number!
+    return newArr
+
+
 
 
 if __name__ == '__main__':

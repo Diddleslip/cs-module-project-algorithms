@@ -2,10 +2,16 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+from collections import Counter
 def single_number(arr):
     # Your code here
-
-    pass
+    # Have all of the values ran through and keep track of how many were put for each value.
+    list = dict(Counter(arr))
+    # Now pick out the key/value pair that only was inputted once.
+    for key, value in list.items():
+        # if a value is set to 1, then return it's key
+        if value == 1:
+            return key
 
 
 if __name__ == '__main__':
